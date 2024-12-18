@@ -29,4 +29,6 @@ class Settings:
         self.log_file = config.get('DEFAULT', 'log_file')
         self.work_dir = config.get('DEFAULT', 'work_dir')
         self.source_dir = config.get('DEFAULT', 'source_dir')
-        self.destanation_dir = config.get('DEFAULT', 'destanation_dir')
+        self.destination_dir = config.get('DEFAULT', 'destination_dir')
+        self.log_level = config.get('DEFAULT', 'log_level')
+        self.prefix = config.get('DEFAULT', 'prefix')
