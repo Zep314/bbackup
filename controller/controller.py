@@ -14,8 +14,10 @@ class Controller:
 
         if os.name == 'nt':
             self._dst_name = 'c:\\test_backup' + os.sep
+            self._src_name = 'c:\\if'
         else:
             self._dst_name = os.sep
+            self._src_name = Settings().source_dir
 
         self._dst_name += Settings().destination_dir
         self._dst_name += os.sep + (Settings().prefix + '_' +
@@ -25,10 +27,11 @@ class Controller:
         copytree(source_dir, destination_dir, dirs_exist_ok=True)
     def run(self):
         self._viewer.message(logging.INFO, "Запуск резервного копирования...")
-        self._viewer.message(logging.DEBUG, f"Папка назначения для копирования: {self._dst_name}")
+        self._viewer.print(logging.DEBUG, f"Папка источник для копирования: {self._src_name}")
+        self._viewer.print(logging.DEBUG, f"Папка назначения для копирования: {self._dst_name}")
 
         self._viewer.print(logging.INFO, "Читаю каталог с файлами...")
 
         self._viewer.print(logging.INFO, "Копирую...")
-        self.my_copy('C:\\if', self._dst_name)
+#        self.my_copy(self._src_name, self._dst_name)
         self._viewer.message(logging.INFO, "Резервное копирование завершено.")
