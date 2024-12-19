@@ -16,10 +16,9 @@ class Controller:
             self._dst_name = 'c:\\test_backup' + os.sep
             self._src_name = 'c:\\if'
         else:
-            self._dst_name = os.sep
+            #self._dst_name = os.sep
             self._src_name = Settings().source_dir
-
-        self._dst_name += Settings().destination_dir
+            self._dst_name += Settings().destination_dir
         self._dst_name += os.sep + (Settings().prefix + '_' +
                                     dt.now(timezone("Europe/Moscow")).strftime("%Y-%m-%d_%H-%M-%S"))
 
