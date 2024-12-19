@@ -11,4 +11,6 @@ python3 -m venv .venv
 source ./.venv/bin/activate
 pip3 install --break-system-packages -r ./requirements.txt
 deactivate
+cd ..
+cd bbackup
 ./start.sh
