@@ -31,7 +31,7 @@ class View:
     # Вывод в лог и на экран
     def print(self, level, msg):
         if level >= logging.root.level:
-            print(f'{dt.now(timezone("Europe/Moscow")).strftime("%Y-%m-%d_%H:%M:%S")} {msg}')
+            print(f'{dt.now(timezone("Europe/Moscow")).strftime("%Y-%m-%d %H:%M:%S")} {msg}')
             self.to_log(level,msg)
 
     # Вывод только в лог
