@@ -95,7 +95,10 @@ class Controller:
             return False
 
     def check_drive(self):
-        print(psutil.disk_partitions())
+        if os.path.ismount(Settings().backup_volume):
+            print('True')
+        else:
+            print('False')
         return True
     def run(self):
         self._viewer.print(logging.DEBUG, "Старт программы...")
