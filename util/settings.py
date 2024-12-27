@@ -23,3 +23,4 @@ class Settings:
         self.prefix = config.get('DEFAULT', 'prefix')
         self.keep_copy = config.get('DEFAULT', 'keep_copy')
         self.backup_volume = config.get('DEFAULT', 'backup_volume')
+        self.period = config.get('DEFAULT', 'period')
